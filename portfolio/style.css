@@ -165,7 +165,7 @@ a{
 }
 
 .text-container {
-    width: 600px;
+    width: 650px;
    
     display: flex;
     flex-direction: column;
@@ -185,9 +185,12 @@ a{
 }
 
 p {
+    width: 100%;
+    text-align: center;
     font-size: 1rem;
     color: black;
-    padding:20px 10px;
+    padding: 5px 20px;
+    
     
 }
 
