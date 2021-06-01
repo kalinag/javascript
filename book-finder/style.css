@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'KoHo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+#title {
+    height: 50px;
+    width: 100vw;
+    
+}
+#title h1 {
+    margin-left: 50px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #16AFF9;
+}
+
+
+
+.container {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    
+
+}
+
+.text-container {
+    margin-top: 80px;
+    width: 45%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 50px;
+
+   
+}
+
+.text-container h2 {
+
+    color: black;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.blue {
+    
+    color: #16AFF9;
+}
+
+.red {
+    color: rgb(202, 17, 17);
+}
+
+.text-container p {
+    width: 320px;
+    font-size: 1.5rem;
+    
+    
+    
+}
+
+.image-container{
+    width: 50%;
+   
+    
+    
+}
+
+.image-container  img{
+    width: 100%;
+}
+
+.search-btn {
+    margin-top: 40px;
+    
+    
+}
+.search-btn a{
+    text-align: center;
+    padding: 3px 30px;
+    border: #16AFF9 2px solid;
+    color: #16AFF9;
+    font-size: 1.5rem;
+}
+
+.search-btn a:hover {
+    color: white;
+    background-color: #16AFF9;
+}
+
+#search {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+.search-book {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.search-book input {
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 40%;
+    border-radius: 5px;
+    
+}
+
+
+.btn {
+    color: white;
+    background-color: #16AFF9;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+.books {
+    margin-top: 80px;
+}
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    list-style: none;
+    grid-gap: 40px 10px;
+}
+
+.list-item {
+    width: 400px;
+    height: 300px;
+    background-color: rgba(22, 173, 249, 0.144);
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    margin-left: 20px;
+    width: 45%;
+    
+
+}
+
+.book-info span {
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+}
+
+
+
+.book-info h4 {
+   
+    margin: 5px;
+    letter-spacing: 1px;
+}
+
+.book-cover {
+    width: 45%;
+
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0 0 5px
+}
+
+.more-btn {
+    padding: 4px 10px;
+    color: white;
+    background-color: #16AFF9;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+
+@media  screen and (max-width:700px) {
+    #title h1 {
+        margin-left: 20px;
+    }
+    .header {
+        flex-direction: column;
+    }
+    
+    .container{
+        flex-direction: column;
+        margin-left: 20px;
+
+        
+    }
+    .text-container {
+        margin-top: 10px;
+        width: 90%;
+        margin-left: 0;
+    }
+
+    
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .book-list{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin: 0;
+        padding: 0;
+        
+        
+    }
+    .list-item{
+        width: 90%;
+        margin: 10px 5px;
+       
+       
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="title">
+        <h1>book finder</h1>
+    </section>
+    <section id="header">
+        <div class="container">
+            <div class="text-container">
+                <h2>Find any <span class="blue"> book </span> you are looking for</h2>
+                <p>You <span class="red"> don't </span>even need to know the title, you can search by author name or publisher</p>
+                <div class="search-btn">
+                    <a href="#search" class="search" id="search-btn">Search</a>
+                </div>
+            </div>
+
+    
+            <div class="image-container">
+                <img src="./book-cover.png" id='image' alt="book-cover">
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <section id="search">
+        <div class="search-book">
+            <input type="text" id="input" placeholder="Search for a book">
+            <button class="btn" id="btn">Search</button>
+        </div>
+        <div class="books">
+            <ul class="book-list">
+                
+            </ul>
+        </div>
+
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

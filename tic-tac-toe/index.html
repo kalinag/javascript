@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section class="current-game center">
+        
+            <h1 class="title"> tic tac toe</h1>
+            <div class="game-container">
+                <div data-cell-index='0' class="cell"></div>
+                <div data-cell-index='1' class="cell"></div>
+                <div data-cell-index='2' class="cell"></div>
+                <div data-cell-index='3' class="cell"></div>
+                <div data-cell-index='4' class="cell"></div>
+                <div data-cell-index='5' class="cell"></div>
+                <div data-cell-index='6' class="cell"></div>
+                <div data-cell-index='7' class="cell"></div>
+                <div data-cell-index='8' class="cell"></div>
+
+            </div>
+
+            
+            <div class="players-turn"></div>
+            <button class="btn btn-primary" id="btn">reset game</button>
+        
+    </section>
+    <section class="end-game-container">
+        <div class="end-game">
+            <div class="end-game-msg"></div>
+            <button class="btn btn-primary" id="new-game-btn">Start new game</button>
+            
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
