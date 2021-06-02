@@ -233,6 +233,7 @@ p {
    
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 400px;
     width: 600px;
 
@@ -274,39 +275,9 @@ p {
 .overlay-text p {
     text-align: center;
 }
-/* .image-container {
-   
-    width: 50%;
- 
-} */
-
-/* .project img {
-    width: 100px;
-    height: 200px;
-    overflow: hidden;
-   
-    backface-visibility: hidden;
-    border-radius: 30px;
-
-}
-
-.overlay-text {
-    width: 50%;
 
 
-    
-} */
 
-
-/* 
-.project:hover .image{
-    opacity: 0.3;
-
-}
-
-.project:hover .overlay-text{
-    opacity: 1; */
-/* } */
 
 #projects .buttons-wrap {
     margin-top: 10px;
@@ -356,11 +327,19 @@ p {
         margin:5px 10px;
         width: 90%;
     }
+
+    .about {
+        height: fit-content;
+
+    }
     .text-container{
         width: 90%;
+        
+        
     }
     .text-box {
         margin-top: 30px;
+        height: fit-content;
         border-top: 2px solid black;
         border-bottom: 2px solid black;
         border-left: none;
@@ -369,6 +348,9 @@ p {
     
     .project {
         width: 90%;
+        height: fit-content;
+        margin-top: 50px;
+      
     }
     #hero h1{
         font-size: 2rem;
@@ -376,6 +358,20 @@ p {
 
     .wrap {
         flex-direction: column;
+        width: 90%;
+        
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+    }
+    .image-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .overlay-text {
+        width: 100%;
+        margin-top: 50px;
     }
 
 
