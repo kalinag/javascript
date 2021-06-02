@@ -1,5 +1,5 @@
 /* Trees Image - Pexels: https://www.pexels.com/photo/photo-of-trees-in-forest-3801030/ */
-@import url("https://fonts.googleapis.com/css?family=KoHo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
 html {
   box-sizing: border-box;
@@ -19,7 +19,7 @@ body {
   background-position: 50% 60%;
   background-attachment: fixed;
   color: white;
-  font-family: 'KoHo', sans-serif;
+  font-family: Quicksand, sans-serif;
   overflow-y: hidden;
 }
 
@@ -89,7 +89,7 @@ ul {
 /* Custom Scrollbar */
 .custom-scroll {
   overflow-y: auto;
-  max-height: 52vh;
+  max-height: 75vh;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
@@ -123,6 +123,8 @@ ul {
 /* Drag and Drop */
 .over {
   padding: 50px 10px;
+  opacity: 0.7;
+  border: white 2px dashed;
 }
 
 .drag-item-list {

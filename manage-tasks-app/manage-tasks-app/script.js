@@ -59,8 +59,6 @@ const filtered = (array) => {
   return filteredArray;
 }
 
-
-
 // Create DOM Elements for each list item
 function createItemEl(columnEl, column, item, index) {
 
@@ -89,7 +87,6 @@ function updateDOM() {
   backlogListArray.forEach((backlogItem, index) => {
     createItemEl(backlogList,0, backlogItem, index);
   })
-
   
   backlogListArray = filtered(backlogListArray);
   // Progress Column
