@@ -98,7 +98,9 @@ const resultCheck = () => {
 
 
 const Player = () =>{
-    player.textContent = `Player ${currentPlayer}'s turn`
+    player.textContent = `Player ${currentPlayer}'s turn`;
+    player.className = 'players-turn';
+    player.classList.add(`player-${currentPlayer}`);
 }
 
 

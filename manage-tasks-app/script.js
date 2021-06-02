@@ -25,16 +25,16 @@ let currentColumn;
 
 // Get Arrays from localStorage if available, set default values if not
 function getSavedColumns() {
-  if (localStorage.getItem('backlogItems')) {
+  if (localStorage.getItem('backlogItem')) {
     backlogListArray = JSON.parse(localStorage.backlogItems);
     progressListArray = JSON.parse(localStorage.progressItems);
     completeListArray = JSON.parse(localStorage.completeItems);
     onHoldListArray = JSON.parse(localStorage.onHoldItems);
   } else {
-    backlogListArray = ['Release the course', 'Sit back and relax'];
-    progressListArray = ['Work on projects', 'Listen to music'];
-    completeListArray = ['Being cool', 'Getting stuff done'];
-    onHoldListArray = ['Being uncool'];
+    backlogListArray = ['Buy a present', 'Study'];
+    progressListArray = ['Learn something new', 'Read a book'];
+    completeListArray = ['Go shopping', 'Get a haircut'];
+    onHoldListArray = ['Remodel the kitchen'];
   }
 }
 
@@ -43,10 +43,20 @@ function getSavedColumns() {
 // Set localStorage Arrays
 function updateSavedColumns() {
   listArrays = [backlogListArray, progressListArray, completeListArray, onHoldListArray];
+
   const arrayNames = ['backlog', 'progress', 'complete', 'onHold'];
+
   arrayNames.forEach((arrayName, index )=> {
     localStorage.setItem(`${arrayName}Items`,JSON.stringify(listArrays[index]));
   });
+}
+
+
+// filter to remove empy items
+const filtered = (array) => {
+  
+  const filteredArray = array.filter(item=>item!==null);
+  return filteredArray;
 }
 
 // Create DOM Elements for each list item
@@ -58,6 +68,9 @@ function createItemEl(columnEl, column, item, index) {
   listEl.textContent=item;
   listEl.draggable = true;
   listEl.setAttribute('ondragstart','drag(event)');
+  listEl.contentEditable = true;
+  listEl.id = index;
+  listEl.setAttribute('onfocusout',`editItem(${index},${column})`)
   //append
   columnEl.appendChild(listEl);
 
@@ -74,26 +87,47 @@ function updateDOM() {
   backlogListArray.forEach((backlogItem, index) => {
     createItemEl(backlogList,0, backlogItem, index);
   })
+  
+  backlogListArray = filtered(backlogListArray);
   // Progress Column
   progressList.textContent = '';
   progressListArray.forEach((progressItem, index) => {
-    createItemEl(progressList,0, progressItem, index);
+    createItemEl(progressList,1, progressItem, index);
   })
+  progressListArray = filtered(progressListArray);
+
   // Complete Column
   completeList.textContent = '';
   completeListArray.forEach((completeItem, index) => {
-    createItemEl(completeList,0, completeItem, index);
+    createItemEl(completeList,2, completeItem, index);
   })
+  completeListArray = filtered(completeListArray);
+
   // On Hold Column
   onHoldList.textContent = '';
   onHoldListArray.forEach((onHoldItem, index) => {
-    createItemEl(onHoldList,0, onHoldItem, index);
+    createItemEl(onHoldList,3, onHoldItem, index);
   })
+  onHoldListArray = filtered(onHoldListArray);
+
   // Run getSavedColumns only once, Update Local Storage
   updatedOnLoad=true;
   updateSavedColumns();
 
 }
+
+// edit or delete items
+const editItem = (id, column)=> {
+  const selectedArray = listArrays[column];
+  const selectedColumnEl = listColumns[column].children;
+  console.log(selectedColumnEl[id].textContent)
+  if (!selectedColumnEl[id].textContent){
+    delete selectedArray[id];
+  }
+  console.log(selectedArray)
+  updateDOM()
+}
+
 //add to column list
 function addToColumn (column) {
   const itemText = addItems[column].textContent;
@@ -139,6 +173,7 @@ function rebuildArrays() {
   for(let i=0; i < onHoldList.children.length; i++) {
     onHoldListArray.push(onHoldList.children[i].textContent);
   }
+  console.log()
   updateDOM();
 }
 
@@ -163,7 +198,6 @@ function dragEnter(column) {
 
 function drop(e) {
   e.preventDefault();
-  //remove color and padding
   listColumns.forEach((column)=> {
     column.classList.remove('over');
   });

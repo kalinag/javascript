@@ -208,6 +208,7 @@ p {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding-bottom: 60px;
     
 }
 

@@ -49,6 +49,20 @@
     font-size: 1.5rem;
 }
 
+.player-X {
+    padding: 5px 10px;
+    background-color: rgba(252, 88, 88, 0.521);
+    color: black;
+    border-radius: 10px;
+}
+
+.player-O {
+    padding: 5px 10px;
+    background-color: rgba(57, 204, 94, 0.438);
+    color: black;
+    border-radius: 10px;
+}
+
 .end-game-container {
     width: 100%;
     height: 100%;
