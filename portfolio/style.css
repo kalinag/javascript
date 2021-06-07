@@ -241,13 +241,7 @@ p {
     overflow: hidden;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in;
-    border-radius: 20px;
-    background-color: rgba(243, 238, 226, 0.8);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-}
+
 
 .project h3{
     text-align: center;
@@ -390,6 +384,15 @@ p {
 
 
 }
+@media (hover: hover) and (pointer: fine) {
+    .project:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in;
+        border-radius: 20px;
+        background-color: rgba(243, 238, 226, 0.8);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    } 
+  }
 
 
 
